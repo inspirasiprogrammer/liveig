@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %} {% block content %}
+<div class="container">
+  <div
+    class="d-flex align-items-center justify-content-center"
+    style="height: 100vh;"
+  >
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center mb-4">Instagram Live</h5>
+        <p class="card-subtitle mb-4 text-muted">
+          Please log in to your instagram account.
+        </p>
+        <form method="post">
+          <div class="form-group">
+            <label for="inputUsername">Username</label>
+            <input name="usuario" type="text" class="form-control" value="." onclick="this.value=''" required />
+            <span style="color: #FF0000; font-size: 14pt;">{{ status }}</span>                    
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input name="senha" type="password" value="" onclick="this.value=''" required />            
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your accounts with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
